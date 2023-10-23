@@ -12,18 +12,22 @@ function encrypt(){
     let encryptedText = "";
     let inputValue = input.value;
     let strInputValue = inputValue.toString()
-    let keyValue=key.value;
-    console.log(`Key  ${key}`);
-    console.log(`Keyvalue ${keyValue}`);
-    console.log(` INTPUT Val ${inputValue}`);
-    console.log(`str INT Val ${strInputValue}`);
-
+    let keyValue=parseInt(key.value);
+    // console.log(`Key  ${key}`);
+    // console.log(`Keyvalue ${keyValue}`);
+    // console.log(` INTPUT Val ${inputValue}`);
+    // console.log(`str INT Val ${strInputValue}`);
+    // console.log(String.fromCharCode(65));
     for(let i = 0; i<strInputValue.length;i++){
         const charCode = strInputValue.charCodeAt(i);
         if(charCode>=65 && charCode<=90){
+            // console.log(charCode)
+            // console.log(((charCode - 65 + keyValue)%26))
             encryptedText+=String.fromCharCode(((charCode - 65 + keyValue)%26)+65);
         } 
         else if(charCode>=97 && charCode<=122){
+            // console.log(charCode)
+            // console.log(((charCode - 97 + keyValue)%26))
             encryptedText+=String.fromCharCode(((charCode - 97 + keyValue)%26)+97);
         }
         else{
@@ -45,11 +49,11 @@ function decrypt(){
     let decryptedText = "";
     let inputValue = input.value;
     let strInputValue = inputValue.toString()
-    let keyValue=key.value;
-    console.log(`Key  ${key}`);
-    console.log(`Keyvalue ${keyValue}`);
-    console.log(` INTPUT Val ${inputValue}`);
-    console.log(`str INT Val ${strInputValue}`);
+    let keyValue=parseInt(key.value);
+    // console.log(`Key  ${key}`);
+    // console.log(`Keyvalue ${keyValue}`);
+    // console.log(` INTPUT Val ${inputValue}`);
+    // console.log(`str INT Val ${strInputValue}`);
 
     for(let i = 0; i<strInputValue.length;i++){
         const charCode = strInputValue.charCodeAt(i);
