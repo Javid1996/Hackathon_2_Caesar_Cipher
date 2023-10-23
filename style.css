@@ -22,7 +22,7 @@ div{
     height: 300px;
     background-color: lightgrey;
     padding: 25px;
-    margin: 0 200px;
+    margin: 0 25%;
     display: flex;
     justify-content: space-between;
     align-items: center;
